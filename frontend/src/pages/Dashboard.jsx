@@ -21,8 +21,8 @@ export default function Dashboard({ onNavigate }) {
       {/* Hero */}
       <div style={{ background: 'linear-gradient(135deg,#1a56db 0%,#3b82f6 100%)', borderRadius: 14, padding: '26px 28px', marginBottom: 20, color: 'white', boxShadow: '0 6px 20px rgba(26,86,219,0.25)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: -20, right: -20, width: 150, height: 150, background: 'rgba(255,255,255,0.06)', borderRadius: '50%' }} />
-        <div style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 8 }}>ABITECH</div>
-        <h1 style={{ color: 'white', fontSize: 26, fontWeight: 800, marginBottom: 6, letterSpacing: '-0.5px' }}>QAENGINE</h1>
+        <div style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 8 }}>Testing Tool </div>
+        <h1 style={{ color: 'white', fontSize: 26, fontWeight: 800, marginBottom: 6, letterSpacing: '-0.5px' }}>ABI-TECH QAENGINE</h1>
         <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, maxWidth: 480 }}>Generate test cases, automation scripts, and bug reports in seconds. Built for QA engineers who want to move faster.</p>
       </div>
 
