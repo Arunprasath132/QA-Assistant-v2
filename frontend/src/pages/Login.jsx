@@ -23,8 +23,14 @@ export default function Login({ onNavigate }) {
       loginSuccess(res.data.access_token, res.data.user);
       toast.success(`Welcome back, ${res.data.user.name.split(' ')[0]}!`);
     } catch (err) {
-      const detail = err?.response?.data?.detail || 'Login failed. Please try again.';
-      setError(detail);
+      const detail = err?.response?.data?.detail;
+      if (typeof detail === 'string') {
+        setError(detail);
+      } else if (err?.code === 'ERR_NETWORK' || !err?.response) {
+        setError('Could not reach the server. Check that the backend is running and reachable.');
+      } else {
+        setError(`Login failed (${err?.response?.status || 'unknown'}). Please try again.`);
+      }
     } finally {
       setLoading(false);
     }
