@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
       }
     }
     checkToken();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  
   }, []);
 
   function loginSuccess(accessToken, userData) {
