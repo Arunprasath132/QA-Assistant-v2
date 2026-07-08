@@ -39,7 +39,15 @@ export default function Signup({ onNavigate }) {
       toast.success('Account created — welcome!');
     } catch (err) {
       const detail = err?.response?.data?.detail;
-      setError(typeof detail === 'string' ? detail : 'Could not create account. Please try again.');
+      if (typeof detail === 'string') {
+        setError(detail);
+      } else if (Array.isArray(detail)) {
+        setError(detail.map((d) => d.msg || JSON.stringify(d)).join(' '));
+      } else if (err?.code === 'ERR_NETWORK' || !err?.response) {
+        setError('Could not reach the server. Check that the backend is running and reachable.');
+      } else {
+        setError(`Server error (${err?.response?.status || 'unknown'}). Please try again.`);
+      }
     } finally {
       setLoading(false);
     }
