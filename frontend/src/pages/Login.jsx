@@ -40,7 +40,7 @@ export default function Login({ onNavigate }) {
     <div className="auth-page">
       <Scene3D />
       <form className="auth-card" onSubmit={handleSubmit}>
-        <div className="auth-logo">QAENGINE</div>
+        <div className="auth-logo">ABI-TECH QAENGINE</div>
         <h1 className="auth-title">Welcome back</h1>
         <p className="auth-subtitle">Log in to access your QA projects.</p>
 
