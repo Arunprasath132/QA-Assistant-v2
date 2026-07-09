@@ -73,7 +73,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: linear-gradient(90deg, var(--primary), var(--primary-mid));
+  background: #29A6D0;
   color: white;
   border: none;
   padding: 10px 18px;
